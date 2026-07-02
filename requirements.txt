@@ -1,0 +1,63 @@
+# Python 3.10 inference environment for Octo.
+# This file intentionally pins versions to avoid modern Colab / pip resolver drift.
+#
+# Install the local package first or after this file:
+#   pip install -e .
+#   pip install -r requirements.txt
+#
+# For GPU JAX with the CUDA 11 wheel used by jaxlib 0.4.20, keep cuDNN on 8.x.
+# The newer nvidia-cudnn-cu11 9.x wheels are not compatible with
+# jaxlib 0.4.20+cuda11.cudnn86.
+#   pip install -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html \
+#     "jaxlib==0.4.20+cuda11.cudnn86" "nvidia-cudnn-cu11==8.6.0.163"
+
+numpy==1.24.3
+scipy==1.11.4
+ml_dtypes==0.2.0
+
+jax==0.4.20
+jaxlib==0.4.20
+
+tensorflow==2.15.0
+tensorflow-datasets==4.9.2
+tensorflow-metadata==1.14.0
+tensorflow_probability==0.23.0
+tensorflow_text==2.15.0
+tensorflow_hub==0.15.0
+tensorflow_datasets==4.9.2
+
+flax==0.7.5
+orbax-checkpoint==0.4.4
+optax==0.1.5
+chex==0.1.85
+distrax==0.1.5
+
+transformers==4.34.1
+tokenizers==0.14.1
+huggingface_hub==0.17.3
+safetensors==0.4.0
+
+dlimp @ git+https://github.com/kvablack/dlimp@5edaa4691567873d495633f2708982b42edf1972
+
+absl-py==1.4.0
+einops==0.6.1
+gym==0.26.2
+imageio==2.31.1
+matplotlib==3.7.3
+mediapy==1.1.9
+ml_collections==0.1.1
+moviepy==1.0.3
+opencv-python==4.8.1.78
+Pillow==10.0.1
+plotly==5.16.1
+requests==2.31.0
+tqdm==4.66.1
+wandb==0.15.10
+
+numpy==1.26.4
+h5py==3.16.0
+protobuf==3.20.3
+
+mani_skill==3.0.1
+gymnasium==1.3.0
+sapien==3.0.3
